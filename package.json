@@ -1,5 +1,5 @@
 {
-  "name": "join-monster",
+  "name": "@sentio/join-monster",
   "version": "3.3.2",
   "description": "A GraphQL to SQL query execution layer for batch data fetching.",
   "main": "dist/index.js",
@@ -29,7 +29,7 @@
     "start": "babel-watch ./test-api/server.js",
     "docs": "mkdocs serve",
     "jsdoc": "babel src/index.js -o temp.js && (jsdoc2md temp.js | sed '/\\*\\*Kind\\*\\*:/d' > docs/API.md) && rm temp.js",
-    "prepublishOnly": "/bin/sh ./scripts/prepublish.sh && npm run build",
+    "prepublishOnly": "npm run build",
     "preversion": ". ./scripts/checkgit.sh && npm test",
     "release": "npm version patch",
     "postversion": "git push && git push --tags",
@@ -72,9 +72,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/join-monster/join-monster/issues"
+    "url": "https://github.com/sentioxyz/join-monster/issues"
   },
-  "homepage": "https://github.com/join-monster/join-monster#readme",
+  "homepage": "https://github.com/sentioxyz/join-monster#readme",
   "peerDependencies": {
     "graphql": "^16.0.0"
   },
@@ -102,7 +102,6 @@
     "jsdoc-to-markdown": "^8.0.0",
     "kcors": "^2.2.1",
     "knex": "^2.4.2",
-    "lodash": "^4.17.21",
     "mysql": "^2.14.1",
     "nyc": "^15.0.1",
     "pg": "^8.2.1",
@@ -115,7 +114,8 @@
     "debug": "^4.1.0",
     "deprecate": "^1.0.0",
     "generatorics": "^1.0.8",
-    "graphql-relay": "^0.10.0"
+    "graphql-relay": "^0.10.0",
+    "lodash": "^4.17.21"
   },
   "overrides": {
     "@stem/nesthydrationjs": {
